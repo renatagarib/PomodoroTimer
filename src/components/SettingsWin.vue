@@ -36,25 +36,30 @@ import { ref } from "@vue/reactivity";
 
 const settings = useSettings()
 
+//variaveis para o tempo de cada categoria
 const pomodoroMinutes = ref(settings.getPomodoroMinutes)
 const shortBreakMinutes = ref(settings.getShortBreakMinutes)
 const longBreakMinutes = ref(settings.getLongBreakMinutes)
 
+//caso o tempo do pomodoro seja editado, muda no store e faz o salvamento no cache do browser
 watch(pomodoroMinutes, () => {
   settings.setPomodoroMinutes(pomodoroMinutes)
   settings.saveInLocalStorage()
 })
 
+//caso o tempo do shor break seja editado, muda no store e faz o salvamento no cache do browser
 watch(shortBreakMinutes, () => {
   settings.setShortBreakMinutes(shortBreakMinutes)
   settings.saveInLocalStorage()
 })
 
+//caso o tempo do long break seja editado, muda no store e faz o salvamento no cache do browser
 watch(longBreakMinutes, () => {
   settings.setLongBreakMinutes(longBreakMinutes)
   settings.saveInLocalStorage()
 })
 
+//fecha tela de opções
 const closeSettings = () => {
   const settings = document.getElementById("settings-id")
   settings.classList.toggle("active")

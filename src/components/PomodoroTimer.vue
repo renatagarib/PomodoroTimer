@@ -20,8 +20,7 @@
         <button v-show="played" class="stop btn" @click="stop">
           STOP
         </button>
-        <img class="restart" @click="restartTimer" src="../assets/PomodoroTimer/imgs/resetart.svg" alt="logo-restart">
-        <!-- <p class="time-tag">{{ tag }}</p> -->
+        <img class="restart" @click="restartTimer" src="../assets/PomodoroTimer/imgs/resetart.svg" alt="restart-button">
       </div>
     </div>
 </template>
@@ -42,13 +41,14 @@ const tag = ref("Pomodoro")
 
 
 
-//instanciando sonido boton
+//som do botão
 const btnSound = new Audio(buttonSound)
-// instanciando alerta de fin
+//som do alerta
 const alertSound = new Audio(alertFinish)
-// indentificador del intervalo
+// variavel para o intervalo
 let timer
 
+//coloca o valor do pomodoro, short break ou long break na variavel minuto
 const typeTime = (typechan, name) => {
   document.querySelector(".restart").classList.remove("active")
   type.value = typechan
@@ -59,6 +59,7 @@ const typeTime = (typechan, name) => {
   clearInterval(timer)
 }
 
+//começa o timer
 const start = () => {
   document.querySelector(".restart").classList.add("active")
   played.value = true
@@ -66,15 +67,15 @@ const start = () => {
   btnSound.play()
   alertSound.pause()
 
-  // (intervalo), cuenta regresiva con minutos y segubdos
+  // intervalo -> contagem regressiva
   timer = setInterval(() => {
     seconds.value--
-    // resta minutos cada 60seg si los minutos no son 0
+    //diminui os minutos a cada 60 segundos, caso minutos > 0
     if (seconds.value < 0 && minutes.value != 0) {
       minutes.value--
       seconds.value = 59
     }
-    // termina el intervlo
+    // termina o intervalo quando minutos e segundos são 0
     if (minutes.value <= 0 && seconds.value <= 0) {
       clearInterval(timer)
       played.value = false
@@ -84,7 +85,7 @@ const start = () => {
   }, 1000)
 }
 
-//parar contador
+//parar timer
 const stop = () => {
   document.querySelector(".restart").classList.remove("active")
   played.value = false
@@ -93,6 +94,7 @@ const stop = () => {
   clearInterval(timer)
 }
 
+//recomeçar timer
 const restartTimer = () => {
   minutes.value = settings.getMinutes(type.value)
   played.value = false
@@ -164,15 +166,6 @@ const restartTimer = () => {
         opacity: 1;
       }
     }
-    .time-tag {
-      width: 70%;
-      background-color: rgba($color: #FAF9F9, $alpha: 0.2);
-      padding: 10px;
-      border-radius: 10px;
-      margin-bottom: 20px;
-      color: #BEE3DB;
-      font-weight: bold;
-    }
   }
   .types {
     display: flex;
@@ -188,7 +181,7 @@ const restartTimer = () => {
       border-radius: 5px;
       &.active {
         transition: 0.2s ease-in-out;
-        background-color:rgba($color: #555B6E, $alpha: 0.8);
+        background-color:rgba($color: #a43721, $alpha: 0.8);
       }
     }
   }

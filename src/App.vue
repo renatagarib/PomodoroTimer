@@ -15,6 +15,7 @@ import NavigationBarVue from './components/NavigationBar.vue'
 import SettingsWinVue from './components/SettingsWin.vue'
 import PomodoroTimerVue from './components/PomodoroTimer.vue'
 
+//instancia os componentes
 export default {
   name: 'App',
   components: {
@@ -52,7 +53,6 @@ export default {
     position: relative;
     z-index: 2;
     width: 800px;
-    height: 900px;
     @media (max-width: 767px) {
       width: 350px;
     }

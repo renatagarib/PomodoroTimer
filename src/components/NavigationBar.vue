@@ -26,17 +26,19 @@ import { ref } from 'vue';
 
 const fullscreen = ref(false)
 
+//torna a tela de opções vizivel
 const openSettings = () => {
   const settings = document.getElementById('settings-id')
-  console.log('oi')
   settings.classList.toggle("active")
 }
 
+//deixa o site fullscreen
 const fullOpen = () => {
   document.getElementById('app').requestFullscreen()
   fullscreen.value = true
 }
 
+//sai do fullscreen
 const fullClose = () => {
   document.exitFullscreen()
   fullscreen.value = false

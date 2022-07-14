@@ -6,7 +6,7 @@
 </template>
 
 <script setup>
-
+//vou fazer na versao 2.0 :)
 </script>
 
 <style lang="scss" scoped>
