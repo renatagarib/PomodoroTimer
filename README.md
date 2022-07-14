@@ -11,7 +11,9 @@ Texto retirado do site: [NaPrática](https://www.napratica.org.br/pomodoro/)
 
 ## Funcionalidades
 O site consiste em um timer composto por um timer pomodoro, um timer de pequena pausa e um timer de grande pausa.
+
 O usuário pode escolher quantos minutos cada timer tem por meio das opções (encontradas no canto direito de cima da tela).
+
 Caso deseje, o usuário tambem pode colocar o site em fullscreen com o icone mais a direita da tela.
 
 ## Inspiração
