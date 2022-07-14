@@ -14,7 +14,7 @@ Caso deseje, o usuário tambem pode colocar o site em fullscreen com o icone mai
 
 ## Inspiração
 Para fazer o site me inspirei no design de um site conhecido e muito usado chamado [PomoFocus](https://pomofocus.io/app)
-![Pomofocus](https://drive.google.com/file/d/1rRIyHIEQ3s7tkYvZI7_CuQ6YzuKKioEm/view?usp=sharing)
+![Pomofocus](https://drive.google.com/u/0/uc?id=1rRIyHIEQ3s7tkYvZI7_CuQ6YzuKKioEm&export=download)
 
 ## Project setup
 ```
