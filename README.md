@@ -1,4 +1,8 @@
-# pomodoro-timer
+# Pomodoro Timer
+
+## Funcionalidades
+```
+O site consiste em um timer dividido em 3 categorias.
 
 ## Project setup
 ```
@@ -22,3 +26,5 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
