@@ -1,4 +1,5 @@
 # Pomodoro Timer 🍅
+Para acessar uma versão funcional do site clique [aqui](https://renatagarib.github.io/PomodoroTimer/)
 O site consiste na reprodução do método de estudo Pomodoro. Essa metodologia garante o fim desse ciclo vicioso e ainda aumentar sua produtividade. Trata-se de uma ferramenta simples e eficaz para que você gerencie o seu tempo.
 
 Essa técnica foi desenvolvida no final dos anos 80 pelo italiano Francesco Cirillo, que procurava uma maneira de aumentar sua produtividade nos estudos durante os primeiros anos de universidade. Para isso, ele utilizou um timer de cozinha para organizar suas tarefas.
